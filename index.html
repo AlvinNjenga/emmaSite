@@ -6,14 +6,16 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-.w3-third img{margin-bottom: 0px; opacity: 0.8; cursor: pointer}
+.w3-third img{margin-bottom: 0px; opacity: 0.8; cursor: pointer; padding: 1px;}
 .w3-third img:hover{opacity: 1}
-.w3-third img{ transition: all .4s ease-in-out; }
-.w3-third img:hover { transform: scale(1.04); }
-img {padding :6px;}
-.fill-height {display: inline-flex;}
+#id {display: flex; justify-content: center}
+li {font-weight: bold;}
 </style>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
@@ -21,7 +23,7 @@ img {padding :6px;}
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
   <h3 class="w3-padding-64 w3-center"><b>EMMA<br>PORTER</b></h3>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a> 
+  <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a> 
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> 
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
@@ -42,29 +44,23 @@ img {padding :6px;}
   <div class="w3-hide-large" style="margin-top:83px"></div>
   
   <!-- Photo grid -->
-  <div class="w3-row fill-height" style="height: 100%">
-    <div class="w3-third" style="height: 100%">
-      <div class="images">
-        <img src="/img/img714.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/img745.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/img5135.jpg" style="width:100%" onclick="onClick(this)">
-      </div>
+  <div class="w3-row" id="portfolio">
+    <div class="w3-third">
+      <img src="./minImg/img1004_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="./minImg/img1002_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="./minImg/img1007_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
     </div>
 
-    <div class="w3-third align">
-      <div class="images2" style="height: 100%">
-        <img src="/img/img5137.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/img5142.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/img771.jpg" style="width:100%" onclick="onClick(this)">
-      </div>
+    <div class="w3-third">
+      <img src="./minImg/img2001_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="./img/img1003.JPG" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="./minImg/img1001_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
     </div>
     
     <div class="w3-third">
-      <div class="images">
-        <img src="/img/img5143.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/img747.jpg" style="width:100%" onclick="onClick(this)">
-        <img src="/img/img5139.jpg" style="width:100%" onclick="onClick(this)">
-      </div>
+      <img src="./minImg/img1008_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="./minImg/img1000_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="./minImg/img1005_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
     </div>
   </div>
 
@@ -73,10 +69,10 @@ img {padding :6px;}
     <div class="w3-bar">
       <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
       <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-    <!--   <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="./second.html" class="w3-bar-item w3-button w3-hover-black">2</a>
+     <!-- <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
       <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a> -->
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+      <a href="./second.html" class="w3-bar-item w3-button w3-hover-black">»</a>
     </div>
   </div>
   
@@ -90,83 +86,81 @@ img {padding :6px;}
   </div>
 
   <!-- About section -->
-  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about" style="padding-left: 0px; padding-right: 0px">
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
     <h4><b>About Me</b></h4>
-    <div class="w3-row w3-center">
-      <div class="w3-col" style="width: 20%">
-        <span>i</span>
-      </div>
-      <div class="w3-col" style="width: 60%">
-        <img src="/img/img5134.JPG" height="100%" width="100%" " style="border: 1px dashed black; min-width: 450px">
-      </div><!--end of column 60%-->
-    </div><!--end of row-->
-    <div class="w3-row">
-      <div class="w3-content w3-justify" style="max-width:600px">
-        <h4 class="w3-center">Emma Porter</h4>
-        <p>I aspire to model to help create more diversity in our media, a cliche statement, yes, but no less true than when it was first said. Young girls who grow that bit bigger and taller need to know they are normal, and if they grow taller than boys they need to know that it's absolutely bloody normal and pretty kick ass - S.O to 12 year old Emma! I don't know everything, I don't know much at all to be honest, but what I do know is there is barely anyone that looks like me in the media. That NEEDS to change, even if that responsibility is not for me to change, it does need to start cha. We expect our media to represent us but if the media are too slow in representing us then we've got to do it ourselves. Like my mum says, if you want it done properly do it yourself, so that is what I'm doing! I'd love to work with companies and people that just want and appreciate real representation. Thank you for taking time to look at my portfolio, I look forward to hearing from you and possibly working with you, and if I'm not what you're looking for at this time, I hope I can be in the future. Thank you, Emma x
-        </p>
+    <img src="./img/img5134.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="600">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4 class="w3-center">Emma Porter</h4>
+      <p>I’m a plus size model who doesn’t fit the mould. Looking at my size I don’t fit in with <b>'regular'</b> models but people also don’t consider me a plus size model because I’m not enormous, which is honestly some of the things people have said. I am plus size, I wear between a size 14 and 18. I aspire to model to create more diversity in a particularly exclusive industry. I want to help create more diversity in our media, a cliche statement, yes, but no less true than when it was first said. Young girls who grow that bit bigger and taller need to know they are normal, and if they grow taller than boys they need to know that it's absolutely bloody normal and pretty kick ass - <b>S.O to 12 year old Emma!</b> I don't know everything, I don't know much at all to be honest, but what I do know is there is barely anyone that looks like me in the media. That <b>NEEDS</b> to change, even if that responsibility is not for me to change, it does need to start changing. We expect our media to represent us but if the media are too slow in representing us then we've got to do it ourselves. Like my mum says, if you want it done properly do it yourself, so that is what I'm doing! I'd love to work with companies and people that just want and appreciate real representation. Thank you for taking time to look at my portfolio, I look forward to hearing from you and possibly working with you, and if I'm not what you're looking for at this time, I hope I can be in the future. Thank you, <b>Emma</b> x
+      </p><br>
+      
 
-        <div class="w3-row-padding w3-center" style="margin-left: 80px">
-          <div class="w3-margin-bottom" style="width: 400px; justify-content: center">
-            <ul class="w3-ul w3-white w3-center">
-              <li class="w3-black w3-xlarge w3-padding-32">My Stats</li>
-              <li class="w3-padding-16">Height: 6"0</li>
-              <li class="w3-padding-16">UK Dress Size: 14-18</li>
-              <li class="w3-padding-16">Body Shape: Hourglass</li>
-              <li class="w3-padding-16">Eyes: Blue</li>
-              <li class="w3-padding-16">Hair: Dark Brown
-              </li>
-            </ul>
-          </div><!--end of stats area-->
-        </div><!--end of stats parent area-->
+      <div class="w3-content" style="margin:0 -5px;">
+        <div class="w3-col w3-margin-bottom w3-center" id="annoying">
+          <ul class="w3-ul w3-white w3-center">
+            <li class="w3-black w3-xlarge w3-padding-32">My Stats</li>
+            <li class="w3-padding-16">Height: 6"0</li>
+            <li class="w3-padding-16">UK Dress Size:       14-18</li>
+            <li class="w3-padding-16">Chest:      39"</li>
+            <li class="w3-padding-16">Waist: 33"</li>
+            <li class="w3-padding-16">Hips: 41"</li>
+            <li class="w3-padding-16">Eyes: Blue</li>
+          </ul>
+        </div><!--end of first half-->
+        
       </div>
     </div>
-  <!-- </div> -->
+  </div>
 
   <!-- Contact section -->
-    <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
-      <div class="w3-content" style="max-width:650px">
-        <h3 class="w3-center" style="padding-bottom: 15px"><b>Contact Me</b></h3>
-      <div class="rows w3-center">
-        <div class="w3-half">
-          <h6 class="w3-dark-grey w3-text-light-grey" style="margin:0; margin-top: 10px;">Telephone</h6>
-          <p class="w3-white" style="margin:0; margin-bottom: 10px; padding: 10px">07763438292</p>
-        </div>
-        <div class="w3-half">
-          <h6 class="w3-dark-grey w3-text-light-grey" style="margin:0; margin-top: 10px; border-left: 2px solid black">Email</h6>
-          <p class="w3-white" style="margin:0; margin-bottom: 10px; padding: 10px; border-left: 2px solid black">emmaporter2605@gmail.com</p>
-        </div>
-      </div><!--end of rows-->
-
-      <div class="row w3-center">
-        <h6 class="w3-dark-grey w3-text-light-grey" style="margin:0; margin-top: 10px;">Instagram</h6>
-        <a href="https://www.instagram.com/emmabloodyporter/" target="_blank"><i class="fab fa-instagram fa-7x w3-white" style="padding-left: 280px; padding-right: 279px"></i></a>
-      </div>
-        <!-- <form action="/action_page.php" target="_blank">
-          <div class="w3-section">
-            <label>Name</label>
-            <input class="w3-input w3-border" type="text" name="Name" required>
-          </div>
-          <div class="w3-section">
-            <label>Email</label>
-            <input class="w3-input w3-border" type="text" name="Email" required>
-          </div>
-          <div class="w3-section">
-            <label>Message</label>
-            <input class="w3-input w3-border" type="text" name="Message" required>
-          </div>
-          <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
-        </form> -->
-      </div>
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center" style="padding-bottom: 20px; font-weight: 6em"><b>Contact Me</b></h4>
     </div>
+
+    <div class="w3-row w3-center">
+      <div class="w3-third">
+        <i class="fas fa-mobile-alt fa-4x"></i>
+        <p>07763438292</p>
+      </div>
+
+      <div class="w3-third">
+        <i class="far fa-envelope fa-4x"></i>
+        <p>emmaporter2605@gmail.com</p>
+      </div>
+
+      <div class="w3-third">
+        <a href="https://www.instagram.com/emmabloodyporter/"><i class="fab fa-instagram fa-4x"></i></a>
+        <a href="https://www.instagram.com/emmabloodyporter/" style="text-decoration: none;"><p>@emmabloodyporter</p></a>
+      </div>
+    </div><!--end of contact logos-->
+  </div><!--end of contact section-->
+
   
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
-</div>
+  <div class="w3-black w3-center w3-padding-24">Thank you for visiting.</a></div>
 
 <!-- End page content -->
 </div>
 
 <script>
+
+//Smooth scrolling on page.
+$(document).ready(function(){
+  $('a[href^="#"]').on('click', function (e){
+    e.preventDefault();
+
+    var target = this.hash;
+    var $target = $(target); 
+
+    //Scroll and show hash.
+    $('html, body').animate({
+      'scrollTop': $target.offset().top
+     }, 1000, 'swing');
+
+  });
+
+});
+
 // Script to open and close sidebar
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
@@ -184,6 +178,8 @@ function onClick(element) {
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
+
+
 }
 
 </script>
