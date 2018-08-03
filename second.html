@@ -23,8 +23,8 @@ li {font-weight: bold;}
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
   <h3 class="w3-padding-64 w3-center"><b>EMMA<br>PORTER</b></h3>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a> 
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> 
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
@@ -40,9 +40,9 @@ li {font-weight: bold;}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px">
 
-  <!-- Push down content on small screens --> 
+  <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
-  
+
   <!-- Photo grid -->
   <div class="w3-row" id="portfolio">
     <div class="w3-third">
@@ -54,7 +54,7 @@ li {font-weight: bold;}
       <img src="./minImg/img2003_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
       <img src="./minImg/img2002_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
     </div>
-    
+
     <div class="w3-third">
       <img src="./minImg/img2004_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
       <img src="./img/img2006.jpg" style="width:100%" onclick="onClick(this)" alt="">
@@ -72,7 +72,7 @@ li {font-weight: bold;}
       <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
     </div>
   </div>
-  
+
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
@@ -85,12 +85,12 @@ li {font-weight: bold;}
   <!-- About section -->
   <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
     <h4><b>About Me</b></h4>
-    <img src="./img/img5134.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="600">
+    <img src="./img/img5134.JPG" alt="Me" class="w3-image w3-padding-32" width="600" height="600">
     <div class="w3-content w3-justify" style="max-width:600px">
       <h4 class="w3-center">Emma Porter</h4>
       <p>I’m a plus size model who doesn’t fit the mould. Looking at my size I don’t fit in with <b>'regular'</b> models but people also don’t consider me a plus size model because I’m not enormous, which is honestly some of the things people have said. I am plus size, I wear between a size 14 and 18. I aspire to model to create more diversity in a particularly exclusive industry. I want to help create more diversity in our media, a cliche statement, yes, but no less true than when it was first said. Young girls who grow that bit bigger and taller need to know they are normal, and if they grow taller than boys they need to know that it's absolutely bloody normal and pretty kick ass - <b>S.O to 12 year old Emma!</b> I don't know everything, I don't know much at all to be honest, but what I do know is there is barely anyone that looks like me in the media. That <b>NEEDS</b> to change, even if that responsibility is not for me to change, it does need to start changing. We expect our media to represent us but if the media are too slow in representing us then we've got to do it ourselves. Like my mum says, if you want it done properly do it yourself, so that is what I'm doing! I'd love to work with companies and people that just want and appreciate real representation. Thank you for taking time to look at my portfolio, I look forward to hearing from you and possibly working with you, and if I'm not what you're looking for at this time, I hope I can be in the future. Thank you, <b>Emma</b> x
       </p><br>
-      
+
 
       <div class="w3-content" style="margin:0 -5px;">
         <div class="w3-col w3-margin-bottom w3-center" id="annoying">
@@ -104,7 +104,7 @@ li {font-weight: bold;}
             <li class="w3-padding-16">Eyes: Blue</li>
           </ul>
         </div><!--end of first half-->
-        
+
       </div>
     </div>
   </div>
@@ -123,7 +123,7 @@ li {font-weight: bold;}
 
       <div class="w3-third">
         <i class="far fa-envelope fa-4x"></i>
-        <p>emmaporter2605@gmail.com</p>
+        <p>emmaportermodels@gmail.com</p>
       </div>
 
       <div class="w3-third">
@@ -133,7 +133,7 @@ li {font-weight: bold;}
     </div><!--end of contact logos-->
   </div><!--end of contact section-->
 
-  
+
   <div class="w3-black w3-center w3-padding-24">Thank you for visiting.</a></div>
 
 <!-- End page content -->
@@ -147,7 +147,7 @@ $(document).ready(function(){
     e.preventDefault();
 
     var target = this.hash;
-    var $target = $(target); 
+    var $target = $(target);
 
     //Scroll and show hash.
     $('html, body').animate({
@@ -163,7 +163,7 @@ function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
 }
- 
+
 function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
