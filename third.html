@@ -23,7 +23,7 @@ li {font-weight: bold;}
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
   <h3 class="w3-padding-64 w3-center"><b>EMMA<br>PORTER</b></h3>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a>
+  <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
@@ -45,34 +45,28 @@ li {font-weight: bold;}
 
   <!-- Photo grid -->
   <div class="w3-row" id="portfolio">
-    <div class="w3-third">
-      <img src="./minImg/img2001_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
-      <img src="./minImg/riverImage7.jpg" style="width:100%" onclick="onClick(this)" alt="">
-      <img src="./minImg/riverImage4.jpg" style="width:100%" onclick="onClick(this)" alt="">
+    <div class="w3-half" style="height:100%;">
+      <img src="./min-filmPhotos/Soho-008-crop.jpg" style="width:100%;" onclick="onClick(this)" alt="">
+      <img src="./min-filmPhotos/Soho-001.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="./min-filmPhotos/Soho-027.jpg" style="width:100%;" onclick="onClick(this)" alt="">
     </div>
 
-    <div class="w3-third">
-      <img src="./minImg/35mm3_opt.jpg" style="width:100%" onclick="onClick(this)" alt="" style="margin-bottom: 2px;">
-      <img src="./minImg/riverImage12.jpg" style="width:100%" onclick="onClick(this)" alt="" style="margin-bottom: 2px;">
-      <img src="./minImg/riverImage5.jpg" style="width:100%" onclick="onClick(this)" alt="">
-    </div>
-
-    <div class="w3-third">
-      <img src="./minImg/img2004_opt.jpg" style="width:100%" onclick="onClick(this)" alt="">
-      <img src="./minImg/riverImage9.jpg" style="width:100%" onclick="onClick(this)" alt="">
-      <img src="./minImg/riverImage3.jpg" style="width:100%" onclick="onClick(this)" alt="">
+    <div class="w3-half">
+      <img src="./min-filmPhotos/Soho-007.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="./min-filmPhotos/Soho-025.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="./min-filmPhotos/Soho-010.jpg" style="width:100%" onclick="onClick(this)" alt="">
     </div>
   </div>
 
   <!-- Pagination -->
   <div class="w3-center w3-padding-32">
     <div class="w3-bar">
-      <a href="./index.html" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="./index.html" class="w3-bar-item w3-button w3-hover-black">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-black">2</a>
-      <a href="./third.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="./index.html" class="w3-bar-item w3-hover-black w3-button">1</a>
+      <a href="./second.html" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="./third." class="w3-bar-item w3-button w3-black">3</a>
       <!--<a href="#" class="w3-bar-item w3-button w3-hover-black">4</a> -->
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+      <a href="./second.html" class="w3-bar-item w3-button w3-hover-black">»</a>
     </div>
   </div>
 
